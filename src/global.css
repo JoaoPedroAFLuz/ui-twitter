@@ -93,3 +93,19 @@ a {
   border-left: 1px solid #ebeef0;
   border-right: 1px solid #ebeef0;
 }
+
+.timeline-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1.25rem;
+  border-bottom: 1px solid #ebeef0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.timeline-header svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--twitter-blue);
+}
