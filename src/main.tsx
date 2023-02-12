@@ -1,4 +1,3 @@
-import { Sparkle } from 'phosphor-react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
@@ -6,6 +5,7 @@ import { Tweet } from './components/Tweet';
 import { Sidebar } from './components/Sidebar';
 
 import './global.css';
+import { Header } from './components/Header';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -14,10 +14,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
       <div className="content">
         <main className="timeline">
-          <div className="timeline-header">
-            Home
-            <Sparkle />
-          </div>
+          <Header title="Home" />
 
           <form className="new-tweet-form">
             <label htmlFor="tweet">
