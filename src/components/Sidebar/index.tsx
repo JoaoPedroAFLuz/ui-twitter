@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 import {
   Bell,
   BookmarkSimple,
@@ -11,7 +13,7 @@ import {
 
 import twitterLogo from '../../assets/logo-twitter.svg';
 
-import './style.css';
+import './styles.css';
 
 export function Sidebar() {
   return (
@@ -19,45 +21,45 @@ export function Sidebar() {
       <img className="logo" src={twitterLogo} alt="Logo" />
 
       <nav className="main-navigation">
-        <a className="active" href="/">
+        <NavLink to="/">
           <House weight="fill" />
           Home
-        </a>
+        </NavLink>
 
-        <a href="">
+        <NavLink to="/explore">
           <Hash />
           Explore
-        </a>
+        </NavLink>
 
-        <a href="">
+        <NavLink to="/notifications">
           <Bell />
           Notifications
-        </a>
+        </NavLink>
 
-        <a href="">
+        <NavLink to="/messages">
           <Envelope />
           Messages
-        </a>
+        </NavLink>
 
-        <a href="">
+        <NavLink to="/bookmarks">
           <BookmarkSimple />
           Bookmarks
-        </a>
+        </NavLink>
 
-        <a href="">
+        <NavLink to="/lists">
           <FileText />
           Lists
-        </a>
+        </NavLink>
 
-        <a href="">
+        <NavLink to="/profile">
           <User />
           Profile
-        </a>
+        </NavLink>
 
-        <a href="">
+        <NavLink to="/more">
           <DotsThreeCircle />
           More
-        </a>
+        </NavLink>
       </nav>
 
       <button className="new-tweet" type="button">
