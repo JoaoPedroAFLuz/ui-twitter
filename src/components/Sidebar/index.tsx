@@ -19,7 +19,7 @@ export function Sidebar() {
       <img className="logo" src={twitterLogo} alt="Logo" />
 
       <nav className="main-navigation">
-        <a className="active" href="">
+        <a className="active" href="/">
           <House weight="fill" />
           Home
         </a>
