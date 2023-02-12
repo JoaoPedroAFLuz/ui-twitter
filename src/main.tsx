@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import { Tweet } from './components/Tweet';
 import { Sidebar } from './components/Sidebar';
+import { Tweet } from './components/Tweet';
 
-import './global.css';
 import { Header } from './components/Header';
 import { Separator } from './components/Separator';
+
+import './global.css';
+
+const tweets = [
+  'Meu terceiro tweet',
+  'Meu segundo tweet',
+  'Meu primeiro tweet',
+];
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -32,12 +39,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
           <Separator />
 
-          <Tweet />
-          <Tweet />
-          <Tweet />
-          <Tweet />
-          <Tweet />
-          <Tweet />
+          {tweets.map((tweet, index) => (
+            <Tweet key={index} content={tweet} />
+          ))}
         </main>
       </div>
     </div>
